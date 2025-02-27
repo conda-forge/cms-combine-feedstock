@@ -1,5 +1,5 @@
 {% set name = "cms-combine" %}
-{% set version = "10.0.2" %}
+{% set version = "10.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a6fecc8b4adc4e631425eeee7501d0258ab64ef36b24680696c2e6f8d38403e7
+  sha256: f198eaf93fbfef472ebf648ccba1bbc199ae9b415c16e7a4c7f6f5c8b9683550
   folder: HiggsAnalysis/CombinedLimit
   patches:
     - clang_warnings.patch
     - makefile.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -51,7 +51,7 @@ about:
     CMS experiment. Note that while this tool was originally developed in the Higgs PAG, its usage
     is now widespread within CMS. Combine provides a command-line interface to many different statistical
     techniques, available inside RooFit/RooStats, that are used widely inside CMS.
-  license:  Apache-2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: HiggsAnalysis/CombinedLimit/LICENSE
   doc_url: https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
