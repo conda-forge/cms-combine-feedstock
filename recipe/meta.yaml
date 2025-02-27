@@ -40,6 +40,9 @@ requirements:
     - gsl
 
 test:
+  source_files:
+    - HiggsAnalysis/CombinedLimit/data/tutorials/multiDim/
+    - HiggsAnalysis/CombinedLimit/data/tutorials/CAT23001/
   imports:
     - HiggsAnalysis.CombinedLimit.PhysicsModel
   commands:
