@@ -11,7 +11,6 @@ source:
   folder: HiggsAnalysis/CombinedLimit
   patches:
     - clang_warnings.patch
-    - makefile.patch
 
 build:
   number: 1
@@ -23,7 +22,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - make
+    - cmake
   host:
     - python
     - root_base
