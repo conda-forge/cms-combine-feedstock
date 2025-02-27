@@ -11,6 +11,7 @@ source:
   folder: HiggsAnalysis/CombinedLimit
   patches:
     - clang_warnings.patch
+    - cmake_installpython.patch
 
 build:
   number: 1
@@ -20,6 +21,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - root_base                              # [build_platform != target_platform]
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - cmake
@@ -34,6 +36,7 @@ requirements:
   run:
     - python
     - pandas
+    - six
     - gsl
 
 test:
