@@ -11,7 +11,7 @@ source:
   folder: HiggsAnalysis/CombinedLimit
   patches:
     - clang_warnings.patch
-    - makefile.patch
+    - cmake_installpython.patch
 
 build:
   number: 2
@@ -19,11 +19,13 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - root_base                              # [build_platform != target_platform]
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
+    - cmake
     - make
-    - python  # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - python
     - root_base
@@ -34,9 +36,13 @@ requirements:
   run:
     - python
     - pandas
+    - six
     - gsl
 
 test:
+  source_files:
+    - HiggsAnalysis/CombinedLimit/data/tutorials/multiDim/
+    - HiggsAnalysis/CombinedLimit/data/tutorials/CAT23001/
   imports:
     - HiggsAnalysis.CombinedLimit.PhysicsModel
   commands:
