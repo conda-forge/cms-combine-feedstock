@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b1afae4..95370f33 100644
+index 5b1afae4..c6dca7e9 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -103,28 +103,25 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
+@@ -103,36 +103,34 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
  # Install the "combine" executable in the bin directory.
  install(TARGETS combine DESTINATION bin)
  
@@ -27,6 +27,18 @@ index 5b1afae4..95370f33 100644
 -#file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
 -
 -set(Python_SITELIB_IN_PREFIX "python")
+-
+-
+-message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
+-# The python package will be installed in such a way that the original
+-# CMSSW-style directory structure is kept, for maximal compatibility.
+-install(DIRECTORY python/ DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis/CombinedLimit)
+-
+-# Create empty __init__.py files in the Python package subdirectories such that
+-# the Python imports work.
+-file(TOUCH ${empty_init_py})
+-INSTALL(FILES ${empty_init_py} DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis)
+-INSTALL(FILES ${empty_init_py} DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis/CombinedLimit)
 +find_package(Python COMPONENTS Interpreter Development) # To get the Python library install directory into Python_SITELIB
 +cmake_path(IS_PREFIX CMAKE_INSTALL_PREFIX "${Python_SITELIB}" sitelib_in_prefix)
 +if(NOT ${sitelib_in_prefix})
@@ -38,13 +50,22 @@ index 5b1afae4..95370f33 100644
 +
 +# The the Python library installation directory relative to the install prefix.
 +file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
- 
-+if(INSTALL_PYTHON)
++
++if(Python_FOUND)
 +  # Install the scripts like "text2workspace.py" to the bin directory.
 +  install(DIRECTORY scripts/ DESTINATION bin USE_SOURCE_PERMISSIONS)
- 
- message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
- # The python package will be installed in such a way that the original
++
++  message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
++  # The python package will be installed in such a way that the original
++  # CMSSW-style directory structure is kept, for maximal compatibility.
++  install(DIRECTORY python/ DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis/CombinedLimit)
++
++  # Create empty __init__.py files in the Python package subdirectories such that
++  # the Python imports work.
++  file(TOUCH ${empty_init_py})
++  INSTALL(FILES ${empty_init_py} DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis)
++  INSTALL(FILES ${empty_init_py} DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis/CombinedLimit)
++endif()
 diff --git a/scripts/plotBSMxsBRLimit.py b/scripts/plotBSMxsBRLimit.py
 old mode 100644
 new mode 100755
