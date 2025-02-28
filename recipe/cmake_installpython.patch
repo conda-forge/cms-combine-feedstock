@@ -1,8 +1,18 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b1afae4..d37dde56 100644
+index 5b1afae4..6a7e9c6c 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -103,28 +103,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
+@@ -23,7 +23,9 @@ include(${ROOT_USE_FILE})
+ 
+ include_directories(${ROOT_INCLUDE_DIRS})
+ include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR})
++message(STATUS "CMAKE_CXX_FLAGS before ROOT: ${CMAKE_CXX_FLAGS}")
+ add_definitions(${ROOT_CXX_FLAGS})
++message(STATUS "CMAKE_CXX_FLAGS after ROOT: ${CMAKE_CXX_FLAGS}")
+ 
+ set(LIBNAME CMSCombine)
+ 
+@@ -103,28 +105,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
  # Install the "combine" executable in the bin directory.
  install(TARGETS combine DESTINATION bin)
  
