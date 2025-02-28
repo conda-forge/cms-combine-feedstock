@@ -5,6 +5,6 @@ set -ex
 # But at least they will have the same version
 Python_SITELIB=$PREFIX$(python3 -c "import sysconfig;p=sysconfig.get_path('purelib');print(p[p.rfind('/lib'):])")
 cmake ${CMAKE_ARGS} -DPython_SITELIB=$Python_SITELIB -S HiggsAnalysis/CombinedLimit -B build
-cmake -LAH build
+grep "rootcling" build/CMakeFiles/CMSCombine.dir/build.make
 cmake --build build --clean-first --parallel="${CPU_COUNT}"
 cmake --install build
