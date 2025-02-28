@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b1afae4..0064a163 100644
+index 5b1afae4..7ec246cb 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -11,8 +11,12 @@ option( MODIFY_ROOTMAP "Modify generated Rootmap to take out classes already bun
+@@ -11,6 +11,9 @@ option( MODIFY_ROOTMAP "Modify generated Rootmap to take out classes already bun
  # cmake path/to/source # change this path to where-ever you cloned Combine repo to
  # make -j4
  
@@ -11,10 +11,15 @@ index 5b1afae4..0064a163 100644
 +message(STATUS "CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
  list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
  find_package( ROOT REQUIRED COMPONENTS Core MathMore RooFitCore RooFit RooStats Minuit HistFactory RooFitHS3)
-+message(STATUS "CMAKE_CXX_FLAGS after find ROOT: ${CMAKE_CXX_FLAGS}")
  find_package(Eigen3 REQUIRED)
- find_package(Vdt)
- find_package(LCG QUIET) # only used for FindBoost in StatAnalysis
+@@ -20,6 +23,7 @@ find_package( Boost REQUIRED COMPONENTS program_options filesystem )
+ 
+ message(STATUS "Using ROOT From: ${ROOT_INCLUDE_DIRS}")
+ include(${ROOT_USE_FILE})
++message(STATUS "CMAKE_CXX_FLAGS after include ROOT: ${CMAKE_CXX_FLAGS}")
+ 
+ include_directories(${ROOT_INCLUDE_DIRS})
+ include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR})
 @@ -103,28 +107,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
  # Install the "combine" executable in the bin directory.
  install(TARGETS combine DESTINATION bin)
