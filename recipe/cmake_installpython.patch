@@ -1,18 +1,21 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b1afae4..6a7e9c6c 100644
+index 5b1afae4..0064a163 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -23,7 +23,9 @@ include(${ROOT_USE_FILE})
+@@ -11,8 +11,12 @@ option( MODIFY_ROOTMAP "Modify generated Rootmap to take out classes already bun
+ # cmake path/to/source # change this path to where-ever you cloned Combine repo to
+ # make -j4
  
- include_directories(${ROOT_INCLUDE_DIRS})
- include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR})
-+message(STATUS "CMAKE_CXX_FLAGS before ROOT: ${CMAKE_CXX_FLAGS}")
- add_definitions(${ROOT_CXX_FLAGS})
-+message(STATUS "CMAKE_CXX_FLAGS after ROOT: ${CMAKE_CXX_FLAGS}")
- 
- set(LIBNAME CMSCombine)
- 
-@@ -103,28 +105,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
++message(STATUS "Are we crosscompiling? ${CMAKE_CROSSCOMPILING}")
++message(STATUS "CMAKE_SYSTEM_PROCESSOR= ${CMAKE_SYSTEM_PROCESSOR}")
++message(STATUS "CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+ list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
+ find_package( ROOT REQUIRED COMPONENTS Core MathMore RooFitCore RooFit RooStats Minuit HistFactory RooFitHS3)
++message(STATUS "CMAKE_CXX_FLAGS after find ROOT: ${CMAKE_CXX_FLAGS}")
+ find_package(Eigen3 REQUIRED)
+ find_package(Vdt)
+ find_package(LCG QUIET) # only used for FindBoost in StatAnalysis
+@@ -103,28 +107,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
  # Install the "combine" executable in the bin directory.
  install(TARGETS combine DESTINATION bin)
  
