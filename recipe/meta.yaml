@@ -16,6 +16,9 @@ source:
 build:
   number: 1
   skip: true  # [win]
+  ignore_run_exports:
+    - python
+    - gsl
 
 requirements:
   build:
