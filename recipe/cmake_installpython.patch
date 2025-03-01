@@ -1,0 +1,58 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5b1afae4..156b0ac8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,7 +11,6 @@ option( MODIFY_ROOTMAP "Modify generated Rootmap to take out classes already bun
+ # cmake path/to/source # change this path to where-ever you cloned Combine repo to
+ # make -j4
+ 
+-list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
+ find_package( ROOT REQUIRED COMPONENTS Core MathMore RooFitCore RooFit RooStats Minuit HistFactory RooFitHS3)
+ find_package(Eigen3 REQUIRED)
+ find_package(Vdt)
+@@ -103,28 +102,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
+ # Install the "combine" executable in the bin directory.
+ install(TARGETS combine DESTINATION bin)
+ 
+-# Install the scripts like "text2workspace" to the bin directory.
+-install(DIRECTORY scripts/ DESTINATION bin)
+-
+-# This block is commented out for now, while using the less sophisticated location below
+-# Check if the Python library installation directory is outside the install
+-# prefix. If it is, we error out because CMake should not install files outside
+-# the prefix. In the future, one can imagine to let the user choose where the
+-# Python libraries get installed in the prefix with a CMake configuration flag.
+-#find_package(Python COMPONENTS Interpreter Development) # To get the Python library install directory into Python_SITELIB
+-#cmake_path(IS_PREFIX CMAKE_INSTALL_PREFIX "${Python_SITELIB}" sitelib_in_prefix)
+-#if(NOT ${sitelib_in_prefix})
+-#    message( FATAL_ERROR "Your Python library installation directory ${Python_SITELIB} "
+-#            "is outside the install prefix ${CMAKE_INSTALL_PREFIX}! "
+-#            "This is not supported for now. Consider changing the install prefix "
+-#            "with the -DCMAKE_INSTALL_PREFIX:PATH=<path> cmake configuration option.")
+-#endif()
+-#
+-## The the Python library installation directory relative to the install prefix.
+-#file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
+-
+-set(Python_SITELIB_IN_PREFIX "python")
++# To get the Python library install directory into Python_SITELIB
++# find_package(Python REQUIRED COMPONENTS Interpreter)
++# The above does not find the right Python in conda-forge so we hardcode it
++if(NOT DEFINED Python_SITELIB)
++        message(FATAL_ERROR "Python_SITELIB not defined")
++endif()
++
++# The the Python library installation directory relative to the install prefix.
++file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
+ 
++# Install the scripts like "text2workspace.py" to the bin directory.
++install(DIRECTORY scripts/ DESTINATION bin USE_SOURCE_PERMISSIONS)
+ 
+ message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
+ # The python package will be installed in such a way that the original
+diff --git a/scripts/plotBSMxsBRLimit.py b/scripts/plotBSMxsBRLimit.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/pruneUncerts.py b/scripts/pruneUncerts.py
+old mode 100644
+new mode 100755

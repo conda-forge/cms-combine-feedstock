@@ -1,13 +1,13 @@
 #!/bin/bash
 set -ex
 
-pushd HiggsAnalysis/CombinedLimit
-make CONDA=1 -j${CPU_COUNT}
-cp -rv build/bin ${PREFIX}
-cp -v build/lib/*${SHLIB_EXT} ${PREFIX}/lib
-cp -v build/lib/*.pcm ${PREFIX}/lib
-cp -v build/lib/*.rootmap ${PREFIX}/lib
-mkdir -p ${PREFIX}/include/HiggsAnalysis/CombinedLimit
-cp -rv interface ${PREFIX}/include/HiggsAnalysis/CombinedLimit/
-cp -rv build/lib/python/HiggsAnalysis $(python3 -c "import sysconfig; print(sysconfig.get_path('platlib'))")/
-popd
+# When cross-compiling, we cannot get the host python sitelib, only the build one
+# But at least they will have the same version
+Python_SITELIB=$PREFIX$(python3 -c "import sysconfig;p=sysconfig.get_path('purelib');print(p[p.rfind('/lib'):])")
+cmake ${CMAKE_ARGS} -DPython_SITELIB=$Python_SITELIB -S HiggsAnalysis/CombinedLimit -B build
+if [[ "${target_platform}" == "osx-arm64" && "${CONDA_BUILD_CROSS_COMPILATION}" == "1" ]]; then
+  echo "Hack to use rootcling from BUILD_PREFIX"
+  sed -i "s#/bin/cmake -E env .*/bin/rootcling#/bin/rootcling#" build/CMakeFiles/CMSCombine.dir/build.make
+fi
+cmake --build build --clean-first --parallel="${CPU_COUNT}"
+cmake --install build
