@@ -14,7 +14,7 @@ source:
     - cmake_installpython.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   ignore_run_exports:
     - python

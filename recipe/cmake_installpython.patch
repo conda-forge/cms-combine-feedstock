@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 5b1afae4..156b0ac8 100644
+index 5b1afae4..154fdf47 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -11,7 +11,6 @@ option( MODIFY_ROOTMAP "Modify generated Rootmap to take out classes already bun
@@ -10,7 +10,16 @@ index 5b1afae4..156b0ac8 100644
  find_package( ROOT REQUIRED COMPONENTS Core MathMore RooFitCore RooFit RooStats Minuit HistFactory RooFitHS3)
  find_package(Eigen3 REQUIRED)
  find_package(Vdt)
-@@ -103,28 +102,18 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
+@@ -25,7 +24,7 @@ include_directories(${ROOT_INCLUDE_DIRS})
+ include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR})
+ add_definitions(${ROOT_CXX_FLAGS})
+ 
+-set(LIBNAME CMSCombine)
++set(LIBNAME HiggsAnalysisCombinedLimit)
+ 
+ file(GLOB HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} interface/*.h*)
+ file(GLOB SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} src/*.c*)
+@@ -103,30 +102,20 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/HiggsAnalysis/CombinedLimit/src/classe
  # Install the "combine" executable in the bin directory.
  install(TARGETS combine DESTINATION bin)
  
@@ -35,21 +44,24 @@ index 5b1afae4..156b0ac8 100644
 -#file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
 -
 -set(Python_SITELIB_IN_PREFIX "python")
-+# To get the Python library install directory into Python_SITELIB
-+# find_package(Python REQUIRED COMPONENTS Interpreter)
-+# The above does not find the right Python in conda-forge so we hardcode it
+-
++# In conda-forge cross-compiling builds we hardcode Python_SITELIB because
++# find_package does not ever find the right version, unfortunately.
++# In any other environment, find_package should work fine
 +if(NOT DEFINED Python_SITELIB)
-+        message(FATAL_ERROR "Python_SITELIB not defined")
++        find_package(Python REQUIRED COMPONENTS Interpreter)
 +endif()
-+
+ 
 +# The the Python library installation directory relative to the install prefix.
 +file(RELATIVE_PATH Python_SITELIB_IN_PREFIX ${CMAKE_INSTALL_PREFIX} ${Python_SITELIB})
- 
+ message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
++
 +# Install the scripts like "text2workspace.py" to the bin directory.
 +install(DIRECTORY scripts/ DESTINATION bin USE_SOURCE_PERMISSIONS)
- 
- message (STATUS "Using Python install location:" ${Python_SITELIB_IN_PREFIX})
++
  # The python package will be installed in such a way that the original
+ # CMSSW-style directory structure is kept, for maximal compatibility.
+ install(DIRECTORY python/ DESTINATION ${Python_SITELIB_IN_PREFIX}/HiggsAnalysis/CombinedLimit)
 diff --git a/scripts/plotBSMxsBRLimit.py b/scripts/plotBSMxsBRLimit.py
 old mode 100644
 new mode 100755
