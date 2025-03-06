@@ -18,7 +18,6 @@ CMS experiment. Note that while this tool was originally developed in the Higgs 
 is now widespread within CMS. Combine provides a command-line interface to many different statistical
 techniques, available inside RooFit/RooStats, that are used widely inside CMS.
 
-
 Current build status
 ====================
 
@@ -334,5 +333,6 @@ Feedstock Maintainers
 =====================
 
 * [@anigamova](https://github.com/anigamova/)
+* [@kcormi](https://github.com/kcormi/)
 * [@nsmith-](https://github.com/nsmith-/)
 
