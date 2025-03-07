@@ -1,3 +1,22 @@
+From 422f34c7ae42264ad64c12c88ba1838be4530290 Mon Sep 17 00:00:00 2001
+From: Nick Smith <nick.smith@cern.ch>
+Date: Sun, 2 Mar 2025 10:09:28 -0600
+Subject: [PATCH] Improve CMakeList for use with conda packaging
+
+Basically allow to manually specify Python_SITELIB
+and don't mess with the path discovery for ROOT
+
+* Cherry-picked with fixes from
+  https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/pull/1053
+  to be backported to patch the v10.1.0.
+---
+ CMakeLists.txt              | 45 +++++++++++++------------------------
+ scripts/plotBSMxsBRLimit.py |  0
+ scripts/pruneUncerts.py     |  0
+ 3 files changed, 16 insertions(+), 29 deletions(-)
+ mode change 100644 => 100755 scripts/plotBSMxsBRLimit.py
+ mode change 100644 => 100755 scripts/pruneUncerts.py
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 62560456..91cc921f 100644
 --- a/CMakeLists.txt
@@ -82,3 +101,6 @@ new mode 100755
 diff --git a/scripts/pruneUncerts.py b/scripts/pruneUncerts.py
 old mode 100644
 new mode 100755
+-- 
+2.48.1
+

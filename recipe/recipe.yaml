@@ -1,0 +1,79 @@
+schema_version: 1
+
+context:
+  name: cms-combine
+  version: 10.1.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: f198eaf93fbfef472ebf648ccba1bbc199ae9b415c16e7a4c7f6f5c8b9683550
+  target_directory: HiggsAnalysis/CombinedLimit
+  patches:
+    - clang_warnings.patch
+    # Backport PR https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/pull/1053
+    # with fixes.
+    # Can be removed after tag v10.1.0
+    - cmake_installpython.patch
+
+build:
+  number: 1
+  skip: win
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: build_platform != target_platform
+      then: root_base
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+    - cmake
+    - make
+  host:
+    - python
+    - root_base
+    - libboost-devel
+    - eigen
+    - vdt
+  run:
+    - python
+    - pandas
+    - six
+    - gsl
+
+tests:
+  - python:
+      imports:
+        - HiggsAnalysis.CombinedLimit.PhysicsModel
+  - files:
+      source:
+        - HiggsAnalysis/CombinedLimit/data/tutorials/multiDim/
+        - HiggsAnalysis/CombinedLimit/data/tutorials/CAT23001/
+    script:
+      - combine -h
+      - text2workspace.py -h
+
+about:
+  summary: A software tool used for statistical analysis within the CMS experiment
+  description: |
+    Combine is a RooStats / RooFit - based software tool used for statistical analysis within the
+    CMS experiment. Note that while this tool was originally developed in the Higgs PAG, its usage
+    is now widespread within CMS. Combine provides a command-line interface to many different statistical
+    techniques, available inside RooFit/RooStats, that are used widely inside CMS.
+  license: Apache-2.0
+  license_file: HiggsAnalysis/CombinedLimit/LICENSE
+  homepage: https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
+  repository: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit
+  documentation: https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
+
+extra:
+  recipe-maintainers:
+    - nsmith-
+    - anigamova
+    - kcormi
