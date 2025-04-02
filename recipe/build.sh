@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-if [[ "${target_platform}" =~ "linux_aarch64" ]]; then
+if [[ "${target_platform}" =~ "aarch64" ]]; then
   export CFLAGS="${CFLAGS//-march=nocona/} ${CFLAGS//-mtune=haswell/} -march=armv8-a"
   export CXXFLAGS="${CXXFLAGS//-march=nocona/} ${CXXFLAGS//-mtune=haswell/} -march=armv8-a"
   export LDFLAGS="${LDFLAGS}"
