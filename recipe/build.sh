@@ -3,9 +3,9 @@ set -ex
 
 if [[ "${target_platform}" =~ "aarch64" ]]; then
   export CFLAGS="${CFLAGS//-march=nocona/}"
-  export CFLAGS="${CFLAGS//-mtune=haswell/} -march=armv8-a"
+  export CFLAGS="${CFLAGS//-mtune=haswell/} -march=native -mtune=generic"
   export CXXFLAGS="${CXXFLAGS//-march=nocona/}"
-  export CXXFLAGS="${CXXFLAGS//-mtune=haswell/} -march=armv8-a"
+  export CXXFLAGS="${CXXFLAGS//-mtune=haswell/} -march=native -mtune=generic"
   export LDFLAGS="${LDFLAGS}"
 fi
 
