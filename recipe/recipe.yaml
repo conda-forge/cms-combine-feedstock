@@ -12,12 +12,6 @@ source:
   url: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 1e22f92dffe6168ae553b08c0106ab4e52b1c4d8c100bee56eeba4d5cbe53259
   target_directory: HiggsAnalysis/CombinedLimit
-  patches:
-    - clang_warnings.patch
-    # Backport PR https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/pull/1053
-    # with fixes.
-    # Can be removed after tag v10.1.0
-    - cmake_installpython.patch
 
 build:
   number: 0
