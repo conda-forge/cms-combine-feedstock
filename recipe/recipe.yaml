@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cms-combine
-  version: 10.1.0
+  version: "10.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: f198eaf93fbfef472ebf648ccba1bbc199ae9b415c16e7a4c7f6f5c8b9683550
+  sha256: 1e22f92dffe6168ae553b08c0106ab4e52b1c4d8c100bee56eeba4d5cbe53259
   target_directory: HiggsAnalysis/CombinedLimit
   patches:
     - clang_warnings.patch
@@ -20,17 +20,16 @@ source:
     - cmake_installpython.patch
 
 build:
-  number: 2
+  number: 0
   skip: win
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: root_base
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - root_base
     - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - cmake
