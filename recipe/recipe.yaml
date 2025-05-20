@@ -28,6 +28,8 @@ requirements:
     - ${{ compiler('cxx') }}
     - cmake
     - make
+    - if: osx-arm64
+      then: sed
   host:
     - python
     - root_base
