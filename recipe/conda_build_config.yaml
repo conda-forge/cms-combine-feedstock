@@ -1,0 +1,7 @@
+# Because ROOT pins the clang version, we also have to, otherwise our build
+# fails for ROOT 6.32, and when cross-compiling for any ROOT version, our build environment fails
+# This should be reverted/bumped on resolution of https://github.com/conda-forge/root-feedstock/issues/311
+c_compiler_version:
+  - 18 # [osx]
+cxx_compiler_version:
+  - 18 # [osx]
