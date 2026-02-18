@@ -1,11 +1,10 @@
 schema_version: 1
 
 context:
-  name: cms-combine
   version: "10.5.0"
 
 package:
-  name: ${{ name|lower }}
+  name: cms-combine
   version: ${{ version }}
 
 source:
@@ -14,7 +13,7 @@ source:
   target_directory: HiggsAnalysis/CombinedLimit
 
 build:
-  number: 1
+  number: 2
   skip: win
 
 requirements:
