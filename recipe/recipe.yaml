@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "10.5.1"
+  version: "10.6.0"
 
 package:
   name: cms-combine
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: bb183b6c6d0911fa18882357d3988d72517fd366ee2bcb2affdef6e3434adb13
+  sha256: c47f53da8766ce282d476c2766af1ca76b244967b0606320ead4560853592d64
   target_directory: HiggsAnalysis/CombinedLimit
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
