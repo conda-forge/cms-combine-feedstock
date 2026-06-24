@@ -5,7 +5,7 @@
 
 [workspace]
 name = "cms-combine-feedstock"
-version = "2026.5.29"  # conda-smithy version used to generate this file
+version = "2026.6.14"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/cms-combine-feedstock"
 authors = ["@conda-forge/cms-combine"]
 channels = ["conda-forge"]
@@ -35,12 +35,12 @@ description = "Build cms-combine-feedstock with variant linux_64_python3.10.____
 [tasks."inspect-linux_64_python3.10.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.10.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.10.____cpythonroot_base6.38.4"
-[tasks."build-linux_64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_64_python3.10.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.10.____cpythonroot_base6.40.0"
+[tasks."build-linux_64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_64_python3.10.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.10.____cpythonroot_base6.40.2"
 [tasks."build-linux_64_python3.11.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_64_python3.11.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -53,12 +53,12 @@ description = "Build cms-combine-feedstock with variant linux_64_python3.11.____
 [tasks."inspect-linux_64_python3.11.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.11.____cpythonroot_base6.38.4"
-[tasks."build-linux_64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_64_python3.11.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.11.____cpythonroot_base6.40.0"
+[tasks."build-linux_64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_64_python3.11.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.11.____cpythonroot_base6.40.2"
 [tasks."build-linux_64_python3.12.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_64_python3.12.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -71,12 +71,12 @@ description = "Build cms-combine-feedstock with variant linux_64_python3.12.____
 [tasks."inspect-linux_64_python3.12.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.12.____cpythonroot_base6.38.4"
-[tasks."build-linux_64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_64_python3.12.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.12.____cpythonroot_base6.40.0"
+[tasks."build-linux_64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_64_python3.12.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.12.____cpythonroot_base6.40.2"
 [tasks."build-linux_64_python3.13.____cp313root_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_64_python3.13.____cp313root_base6.36.10 directly (without setup scripts)"
@@ -89,12 +89,12 @@ description = "Build cms-combine-feedstock with variant linux_64_python3.13.____
 [tasks."inspect-linux_64_python3.13.____cp313root_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.13.____cp313root_base6.38.4"
-[tasks."build-linux_64_python3.13.____cp313root_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_64_python3.13.____cp313root_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_64_python3.13.____cp313root_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.13.____cp313root_base6.40.0"
+[tasks."build-linux_64_python3.13.____cp313root_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_64_python3.13.____cp313root_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_64_python3.13.____cp313root_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.13.____cp313root_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_64_python3.13.____cp313root_base6.40.2"
 [tasks."build-linux_aarch64_python3.10.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_aarch64_python3.10.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -107,12 +107,12 @@ description = "Build cms-combine-feedstock with variant linux_aarch64_python3.10
 [tasks."inspect-linux_aarch64_python3.10.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.10.____cpythonroot_base6.38.4"
-[tasks."build-linux_aarch64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_aarch64_python3.10.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.10.____cpythonroot_base6.40.0"
+[tasks."build-linux_aarch64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_aarch64_python3.10.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.10.____cpythonroot_base6.40.2"
 [tasks."build-linux_aarch64_python3.11.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_aarch64_python3.11.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -125,12 +125,12 @@ description = "Build cms-combine-feedstock with variant linux_aarch64_python3.11
 [tasks."inspect-linux_aarch64_python3.11.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.11.____cpythonroot_base6.38.4"
-[tasks."build-linux_aarch64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_aarch64_python3.11.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.11.____cpythonroot_base6.40.0"
+[tasks."build-linux_aarch64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_aarch64_python3.11.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.11.____cpythonroot_base6.40.2"
 [tasks."build-linux_aarch64_python3.12.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_aarch64_python3.12.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -143,12 +143,12 @@ description = "Build cms-combine-feedstock with variant linux_aarch64_python3.12
 [tasks."inspect-linux_aarch64_python3.12.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.12.____cpythonroot_base6.38.4"
-[tasks."build-linux_aarch64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_aarch64_python3.12.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.12.____cpythonroot_base6.40.0"
+[tasks."build-linux_aarch64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_aarch64_python3.12.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.12.____cpythonroot_base6.40.2"
 [tasks."build-linux_aarch64_python3.13.____cp313root_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_aarch64_python3.13.____cp313root_base6.36.10 directly (without setup scripts)"
@@ -161,12 +161,12 @@ description = "Build cms-combine-feedstock with variant linux_aarch64_python3.13
 [tasks."inspect-linux_aarch64_python3.13.____cp313root_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.13.____cp313root_base6.38.4"
-[tasks."build-linux_aarch64_python3.13.____cp313root_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_aarch64_python3.13.____cp313root_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_python3.13.____cp313root_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.13.____cp313root_base6.40.0"
+[tasks."build-linux_aarch64_python3.13.____cp313root_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_aarch64_python3.13.____cp313root_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_python3.13.____cp313root_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.13.____cp313root_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_aarch64_python3.13.____cp313root_base6.40.2"
 [tasks."build-linux_ppc64le_python3.10.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.10.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -179,12 +179,12 @@ description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.10
 [tasks."inspect-linux_ppc64le_python3.10.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.10.____cpythonroot_base6.38.4"
-[tasks."build-linux_ppc64le_python3.10.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.10.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_python3.10.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.10.____cpythonroot_base6.40.0"
+[tasks."build-linux_ppc64le_python3.10.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.10.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_python3.10.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.10.____cpythonroot_base6.40.2"
 [tasks."build-linux_ppc64le_python3.11.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.11.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -197,12 +197,12 @@ description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.11
 [tasks."inspect-linux_ppc64le_python3.11.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.11.____cpythonroot_base6.38.4"
-[tasks."build-linux_ppc64le_python3.11.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.11.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_python3.11.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.11.____cpythonroot_base6.40.0"
+[tasks."build-linux_ppc64le_python3.11.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.11.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_python3.11.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.11.____cpythonroot_base6.40.2"
 [tasks."build-linux_ppc64le_python3.12.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.12.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -215,12 +215,12 @@ description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.12
 [tasks."inspect-linux_ppc64le_python3.12.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.12.____cpythonroot_base6.38.4"
-[tasks."build-linux_ppc64le_python3.12.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.12.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_python3.12.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.12.____cpythonroot_base6.40.0"
+[tasks."build-linux_ppc64le_python3.12.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.12.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_python3.12.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.12.____cpythonroot_base6.40.2"
 [tasks."build-linux_ppc64le_python3.13.____cp313root_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.13.____cp313root_base6.36.10 directly (without setup scripts)"
@@ -233,12 +233,12 @@ description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.13
 [tasks."inspect-linux_ppc64le_python3.13.____cp313root_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.13.____cp313root_base6.38.4"
-[tasks."build-linux_ppc64le_python3.13.____cp313root_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.13.____cp313root_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_python3.13.____cp313root_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.13.____cp313root_base6.40.0"
+[tasks."build-linux_ppc64le_python3.13.____cp313root_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant linux_ppc64le_python3.13.____cp313root_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_python3.13.____cp313root_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_python3.13.____cp313root_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant linux_ppc64le_python3.13.____cp313root_base6.40.2"
 [tasks."build-osx_64_python3.10.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_64_python3.10.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -251,12 +251,12 @@ description = "Build cms-combine-feedstock with variant osx_64_python3.10.____cp
 [tasks."inspect-osx_64_python3.10.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.10.____cpythonroot_base6.38.4"
-[tasks."build-osx_64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_64_python3.10.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.10.____cpythonroot_base6.40.0"
+[tasks."build-osx_64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_64_python3.10.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.10.____cpythonroot_base6.40.2"
 [tasks."build-osx_64_python3.11.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_64_python3.11.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -269,12 +269,12 @@ description = "Build cms-combine-feedstock with variant osx_64_python3.11.____cp
 [tasks."inspect-osx_64_python3.11.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.11.____cpythonroot_base6.38.4"
-[tasks."build-osx_64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_64_python3.11.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.11.____cpythonroot_base6.40.0"
+[tasks."build-osx_64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_64_python3.11.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.11.____cpythonroot_base6.40.2"
 [tasks."build-osx_64_python3.12.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_64_python3.12.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -287,12 +287,12 @@ description = "Build cms-combine-feedstock with variant osx_64_python3.12.____cp
 [tasks."inspect-osx_64_python3.12.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.12.____cpythonroot_base6.38.4"
-[tasks."build-osx_64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_64_python3.12.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.12.____cpythonroot_base6.40.0"
+[tasks."build-osx_64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_64_python3.12.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.12.____cpythonroot_base6.40.2"
 [tasks."build-osx_64_python3.13.____cp313root_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_64_python3.13.____cp313root_base6.36.10 directly (without setup scripts)"
@@ -305,12 +305,12 @@ description = "Build cms-combine-feedstock with variant osx_64_python3.13.____cp
 [tasks."inspect-osx_64_python3.13.____cp313root_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.13.____cp313root_base6.38.4"
-[tasks."build-osx_64_python3.13.____cp313root_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_64_python3.13.____cp313root_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_64_python3.13.____cp313root_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.13.____cp313root_base6.40.0"
+[tasks."build-osx_64_python3.13.____cp313root_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_64_python3.13.____cp313root_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_64_python3.13.____cp313root_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.13.____cp313root_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_64_python3.13.____cp313root_base6.40.2"
 [tasks."build-osx_arm64_python3.10.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_arm64_python3.10.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -323,12 +323,12 @@ description = "Build cms-combine-feedstock with variant osx_arm64_python3.10.___
 [tasks."inspect-osx_arm64_python3.10.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.10.____cpythonroot_base6.38.4"
-[tasks."build-osx_arm64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_arm64_python3.10.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.10.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.10.____cpythonroot_base6.40.0"
+[tasks."build-osx_arm64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_arm64_python3.10.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_python3.10.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.10.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.10.____cpythonroot_base6.40.2"
 [tasks."build-osx_arm64_python3.11.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_arm64_python3.11.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -341,12 +341,12 @@ description = "Build cms-combine-feedstock with variant osx_arm64_python3.11.___
 [tasks."inspect-osx_arm64_python3.11.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.11.____cpythonroot_base6.38.4"
-[tasks."build-osx_arm64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_arm64_python3.11.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.11.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.11.____cpythonroot_base6.40.0"
+[tasks."build-osx_arm64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_arm64_python3.11.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_python3.11.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.11.____cpythonroot_base6.40.2"
 [tasks."build-osx_arm64_python3.12.____cpythonroot_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_arm64_python3.12.____cpythonroot_base6.36.10 directly (without setup scripts)"
@@ -359,12 +359,12 @@ description = "Build cms-combine-feedstock with variant osx_arm64_python3.12.___
 [tasks."inspect-osx_arm64_python3.12.____cpythonroot_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.12.____cpythonroot_base6.38.4"
-[tasks."build-osx_arm64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_arm64_python3.12.____cpythonroot_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.12.____cpythonroot_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.12.____cpythonroot_base6.40.0"
+[tasks."build-osx_arm64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_arm64_python3.12.____cpythonroot_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_python3.12.____cpythonroot_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpythonroot_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.12.____cpythonroot_base6.40.2"
 [tasks."build-osx_arm64_python3.13.____cp313root_base6.36.10"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.36.10.yaml"
 description = "Build cms-combine-feedstock with variant osx_arm64_python3.13.____cp313root_base6.36.10 directly (without setup scripts)"
@@ -377,12 +377,12 @@ description = "Build cms-combine-feedstock with variant osx_arm64_python3.13.___
 [tasks."inspect-osx_arm64_python3.13.____cp313root_base6.38.4"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.38.4.yaml"
 description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.13.____cp313root_base6.38.4"
-[tasks."build-osx_arm64_python3.13.____cp313root_base6.40.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.40.0.yaml"
-description = "Build cms-combine-feedstock with variant osx_arm64_python3.13.____cp313root_base6.40.0 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_python3.13.____cp313root_base6.40.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.40.0.yaml"
-description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.13.____cp313root_base6.40.0"
+[tasks."build-osx_arm64_python3.13.____cp313root_base6.40.2"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.40.2.yaml"
+description = "Build cms-combine-feedstock with variant osx_arm64_python3.13.____cp313root_base6.40.2 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_python3.13.____cp313root_base6.40.2"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313root_base6.40.2.yaml"
+description = "List contents of cms-combine-feedstock packages built for variant osx_arm64_python3.13.____cp313root_base6.40.2"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
